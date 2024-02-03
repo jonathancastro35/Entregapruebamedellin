@@ -1,0 +1,64 @@
+<div class="container wrapper wrapper2">
+    <div class="row">
+        <!-- Form -->
+        <div class="col-md-12">
+            
+            
+            <h3>Datos de la tendencia central</h3>
+            <form [formGroup]=" tendenciaForm" (ngSubmit)="listado()" novalidate>
+                <div class="form-group">
+
+                    <div class="form-group">
+                        <label class="form-label">Escoger el agente</label>
+                        <select type="text" formControlName="Funcionalidad">
+                            <option value="Agente A">Agente A</option>
+                            <option value="Agente B">Agente B</option>
+                            <option value="Agente C">Agente C</option>
+                            
+                        </select>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+
+            
+            <h4>Resultados</h4>
+                <table class="table" >
+                    <thead>
+                        <tr>	
+                            
+                            <th scope="col">Generando la figura</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let p of Listado">
+
+
+                            <td style="text-align:right">{{p.numn}} </td>
+                            <td style="text-align:right">{{p.respuestaalatendencia}} </td>
+                            <td style="text-align:right">{{p.datosevaluados}} </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+             
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
