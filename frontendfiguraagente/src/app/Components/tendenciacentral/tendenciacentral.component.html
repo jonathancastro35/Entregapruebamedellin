@@ -10,7 +10,7 @@
 
                     <div class="form-group">
                         <label class="form-label">Escoger el agente</label>
-                        <select type="text" formControlName="Funcionalidad">
+                        <select type="text" formControlName="Nombreagente">
                             <option value="Agente A">Agente A</option>
                             <option value="Agente B">Agente B</option>
                             <option value="Agente C">Agente C</option>
@@ -24,18 +24,20 @@
             </form>
 
             
-            <h4>Resultados</h4>
+            <h4>Generando la figura</h4>
                 <table class="table" >
                     <thead>
                         <tr>	
                             
-                            <th scope="col">Generando la figura</th>
+                            <th scope="col">Nùmero de datos-Respuesta-Datos devueltos</th>
+                            
                             
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let p of Listado">
 
+                          
 
                             <td style="text-align:right">{{p.numn}} </td>
                             <td style="text-align:right">{{p.respuestaalatendencia}} </td>

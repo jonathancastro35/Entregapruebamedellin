@@ -25,13 +25,14 @@ export class TendenciacentralComponent implements OnInit{
     public tendenciacentral:TendenciaService
   ){}
 
-  
+
 
   addingresotendencia(){
     return this.tendenciaForm = this.fb.group({
       
-      Funcionalidad:['', Validators.required],
-      
+      Nombrefuncionalidad:['Tendencia central', Validators.required],
+      Nombreagente:['', Validators.required],
+      Numn:[10, Validators.required]
     });
   }
 

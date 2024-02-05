@@ -24,10 +24,10 @@ namespace Agentesfiguras.Controllers
 
         
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<Funcionalidaduno>>> PostFuncionalidaduno(String nombreagente)
+        public async Task<ActionResult<IEnumerable<Funcionalidaduno>>> PostFuncionalidaduno(Funcionalidades funcionalidades)
         {
 
-            if (nombreagente == "Agente A")
+            if (funcionalidades.Nombreagente == "Agente A")
             {
 
                 List<Funcionalidaduno> listarresp = new List<Funcionalidaduno>();
@@ -41,11 +41,11 @@ namespace Agentesfiguras.Controllers
                     sum = sum + temp_int[i];
                 }
 
-                listarresp.Add(new Funcionalidaduno() { Nombreagente = nombreagente, Numn = temp_int.Length, Respuestaalatendencia = (sum/cantidad), Datosevaluados = "20, 10, 15, 29, 30, 9, 8, 6, 7, 9" });
+                listarresp.Add(new Funcionalidaduno() { Nombreagente = funcionalidades.Nombreagente, Numn = temp_int.Length, Respuestaalatendencia = (sum/cantidad), Datosevaluados = "20, 10, 15, 29, 30, 9, 8, 6, 7, 9" });
                 return listarresp;
             }
 
-            if(nombreagente == "Agente B")
+            if(funcionalidades.Nombreagente == "Agente B")
             {
                 List<Funcionalidaduno> listarresp = new List<Funcionalidaduno>();
                 
@@ -60,12 +60,12 @@ namespace Agentesfiguras.Controllers
                 }
 
                
-                    listarresp.Add(new Funcionalidaduno() { Nombreagente = nombreagente, Numn = temp_int.Length, Respuestaalatendencia = (temp_int.Length/sumarmonica), Datosevaluados = "20, 10, 15, 29, 30, 9, 8, 6, 7, 9" });
+                    listarresp.Add(new Funcionalidaduno() { Nombreagente = funcionalidades.Nombreagente, Numn = temp_int.Length, Respuestaalatendencia = (temp_int.Length/sumarmonica), Datosevaluados = "20, 10, 15, 29, 30, 9, 8, 6, 7, 9" });
                     return listarresp;
 
             }
 
-            if (nombreagente == "Agente C")
+            if (funcionalidades.Nombreagente == "Agente C")
             {
                 List<Funcionalidaduno> listarresp = new List<Funcionalidaduno>();
                 int[] temp_int = new int[10] { 20, 10, 15, 29, 30, 9, 8, 6, 7, 9 };
@@ -87,13 +87,13 @@ namespace Agentesfiguras.Controllers
                 {
                    
                    
-                    listarresp.Add(new Funcionalidaduno() { Nombreagente = nombreagente, Numn = temp_int.Length, Respuestaalatendencia = (((int)temp_int[(temp_int.Length/2)-1]+ (temp_int.Length / 2))), Datosevaluados = "20, 10, 15, 29, 30, 9, 8, 6, 7, 9" });
+                    listarresp.Add(new Funcionalidaduno() { Nombreagente = funcionalidades.Nombreagente, Numn = temp_int.Length, Respuestaalatendencia = (((int)temp_int[(temp_int.Length/2)-1]+ (temp_int.Length / 2))), Datosevaluados = "20, 10, 15, 29, 30, 9, 8, 6, 7, 9" });
                     return listarresp;
                 }
 
                 else
                 {
-                    listarresp.Add(new Funcionalidaduno() { Nombreagente = nombreagente, Numn = temp_int.Length, Respuestaalatendencia = (((int)temp_int[(temp_int.Length / 2)])), Datosevaluados = "20, 10, 15, 29, 30, 9, 8, 6, 7, 9" });
+                    listarresp.Add(new Funcionalidaduno() { Nombreagente = funcionalidades.Nombreagente, Numn = temp_int.Length, Respuestaalatendencia = (((int)temp_int[(temp_int.Length / 2)])), Datosevaluados = "20, 10, 15, 29, 30, 9, 8, 6, 7, 9" });
                     return listarresp;
                 }
                 

@@ -1,9 +1,10 @@
 export class Tendencia {
-    Id?:number;
+    
+    id?:number;
+    Nombrefuncionalidad!:string;
     Nombreagente!:string;
     Numn!:number;
-    Respuestaalatendencia!:number;
-    Datosevaluados!:string;
+   
 }
 
 
